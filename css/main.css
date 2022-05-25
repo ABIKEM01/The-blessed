@@ -170,9 +170,9 @@ footer h2{
     font-size: 1.5rem;
 }
 
-.footer_icon-flex li:hover{
-    background-color: red;
-    transform: rotateX(7);
+.footer_icon-flex > li:hover{
+    transition: all 2s ease;
+    font-size: 2rem;
 }
 /*footer end*/
 
@@ -187,6 +187,22 @@ footer h2{
 }
 .image_div >img{
     border-radius: 50%;
+}
+.img_abt{
+    float: left;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+}
+.about_deco{
+    margin: 5rem 10rem ;
+    text-align: center;
+    align-items: center;
+}
+.float_right{
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
 }
 /* .float_right{
     float: right;
