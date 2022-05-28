@@ -9,202 +9,401 @@
     font-style: normal;
 }
 
-:root{ 
-    --primary: #c7c7c7;
-    --mainWhite: #fff;
-    --mainDark: #000;
-    --mainRed: rgb(134, 13, 13);
-    --gy: greenYellow;
-}
-
-
+/* global styles*/
 *{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 body{
-    background: var(--primary);
-    font-family: 'raleway';
+    padding: 0;
+    margin: 0;
 }
 
-/* global */
 ul{
-    margin: 0;
     padding: 0;
-    list-style: none;
-}
-a{
-    text-decoration: none;
+    margin: 0;
 }
 img{
-    width: 100%;
+    width:100%
 }
-h1, h2{
-    font-family: "Booter - Zero Zero";;
-}
-button{
-    border: none;
-}
-/*end of global*/
 
-/*nav*/
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+/* End of global */
+
+/* header styling*/
 header{
-    background-color: var(--mainRed);
-    min-height: 450px;
-    background: url(../images/bcg-header.jpg);
+    padding: 2px;
+    min-height: 520px;
+    background-color: rgba(0, 0, 0, .6);
+    background: url('../images/bcg-header.jpg');
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    padding-bottom: 30px;
+    text-align: center;
 }
-
 header > nav{
+    height: 50px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, .5);
+    border-bottom: 1px solid #fff;
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 10px 20px;
-    background-color: rgba(0,0,0,0.5);
-    border-bottom: 1px solid var(--mainWhite);
+    justify-content: center;
+
     position: sticky;
     top: 0;
 }
-header > nav >ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header > nav > ul > li{
+    margin-right: 5.5rem;
 }
-
-header > nav >ul >li{
-    margin-right: 50px;
-}
-header > nav >ul >li >a{
-    color: var(--mainWhite);
-    font-family: 'raleway';
-    font-weight: 300px;
-    text-transform: uppercase;
-    transition: all 1s ease-in;
-}
-header > nav >ul >li >a:hover{
-color: var(--gy);
-text-decoration: underline;
-text-decoration-color: var(--gy);
-}
-.banner{
-    display: flex;
-    flex-direction: column;
+header > nav > ul{
+    display:flex;
     justify-content: center;
     align-items: center;
+    list-style: none;
 }
-
-.banner h1{
-    font-size: 10rem;
+header > nav > ul > li > a{
+    text-decoration: none;
     color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+    transition: all 0.3s ease-in;
 }
-.banner button{
-    padding: 20px 30px;
+
+header > nav > ul > li > a:hover{
+    text-decoration: underline;
+    text-decoration-color: greenyellow;
+}
+
+header > h1{
+    color: #fff;
+    font-family: "Booter - Zero Zero";
+    font-size: 10rem;
+    margin: 0;
+}
+
+header > .btn-header-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > .btn-header-wrapper >.btnHeaderContainer{
+    width: 300px;
+    padding: 10px 20px;
+    background-color: rgba(255,255,255, 0.5);
+    border-radius: 5px;
+}
+
+header > .btn-header-wrapper >.btnHeaderContainer > button{
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+}
+
+header > .btn-header-wrapper >.btnHeaderContainer:hover + .btn-play{
+    background-color: red;
+    color:#fff;
+}
+
+
+header > .btn-header-wrapper >.btn-play{
+    font-size: 2rem;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
     border-radius: 10px;
-    cursor: pointer;
-    margin-bottom: 10px;
 }
-.banner .fa-play{
-    font-size: 25px;
-}
+/* End of header */
 
-.banner .btn-arrival:hover + .btn-icon{
-    background-color: red;
-}
-/* .btn-icon :hover{
-    background-color: red;
-} */
+/* Events section */
+    .title{
+        text-align: center;
+        font-family: "Booter - Zero Zero";
+        font-size: 4rem;
+        margin-top: 0;
+    }
 
-/*main section*/
-main h2{
-    font-size: 5rem;
+    .tableWrapper{
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    .events table{
+        min-width: 650px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+        border-collapse: collapse;
+    }
+
+    .events table td{
+        border-bottom: 1px solid rgba(0, 0, 0, .5);
+        margin-right: 10px 20px;
+        padding: 10px;
+    }
+
+    .events table td .btn-events{
+        padding: 10px 20px;
+        background-color: black;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+    .events table td .btn-events:hover{
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+
+/* End of events */
+
+
+/* collection page styling */
+.collection{
+    width: 75%;
+    margin: 0 auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+
     text-align: center;
 }
-main table{
-    min-width: 600px;
-    max-width: 800px;
-    margin: 50px auto;
-    border-collapse: collapse;
-    padding: 10px;
-}
-main table td{
-    border-bottom: 1px solid var(--mainDark);
-    padding: 20px;
-}
-main table button{
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: var(--mainDark);
-    color: var(--mainWhite);
-    cursor: pointer;
-}
-main table button:hover{
-    background-color: rgba(0,0,0,0.5);
-}
-/*end main section*/
 
-
-/*footer*/
-footer{
-    display: flex;
-    justify-content: space-around;
-    height: 100px;
-    background-color: var(--mainDark);
-    color: #fff;
-    align-items: center;
-    border-bottom: 2px solid white;
+.collection > .collection-items > .collection-items-title{
+    text-align: center;
+    font-family: "Booter - Zero Zero";
+    font-size: 2rem;
+    margin-top: 0;
 }
 
-footer h2{
-    font-size: 5rem;
-}
-.footer_icon-flex{
+.collection > .collection-items > .collection-items-footer{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
-.footer_icon-flex li a{
-    margin-left: 20px;
-    color: #fff;
+
+.collection > .collection-items > .collection-items-footer > span{
+    font-family: 'Shadows Into Light', cursive;
     font-size: 1.5rem;
 }
 
-.footer_icon-flex > li:hover{
-    transition: all 2s ease;
-    font-size: 2rem;
+.collection > .collection-items > .collection-items-footer > .collection-items-btn{
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }
-/*footer end*/
 
-/*about page*/
-.about{
-    font-size: 3rem;
-    text-align: center;
+.collection > .collection-items > .collection-items-footer > .collection-items-btn:hover{
+    background-color: rgba(0,0,0, 0.5);
 }
-.image_div{
-    width: 10rem;
-    height: 10rem;
+/* End of collection */
+
+
+/* cart styling */
+    .cart{
+        margin: 50px 0;
+        text-align: center;
+        /* background-color: blue; */
+    }
+
+    .cart .tableWrapper{
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    .cart .tableWrapper table{
+        min-width: 650px;
+        max-width: 100%;
+        margin: 0 auto;
+        font-size: .6rem;
+    }
+
+    .cart-items-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+
+    }
+
+    .cart-items-title img{
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+    }
+    .cart-items-qty{
+        width: 70px;
+        padding: 5px 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        background: #ccc;
+    }
+
+    .cart-items-remove{
+        font-weight: bold;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #eb5757;
+    }
+
+    .cart-items-remove:hover{
+        background-color: #e87676;
+    }
+    .cart-total{
+        font-size: 1.5rem;
+    }
+
+    .cart-item-purshase{
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: blue;
+        cursor: pointer;
+    }
+    .cart-item-purshase:hover{
+        background-color: rgba(0,0,255,0.7);
+
+    }
+   
+/* End of cart */
+
+
+
+/* about styling */
+    .about{
+       padding: 20px;
+       width: 75%;
+       margin: 0 auto;
+    }
+    .about img{
+        float: left;
+        height: 300px;
+        width: 300px;
+        margin: 15px;
+        border-radius: 50%;
+     }
+
+     .about p{
+        text-align: justify;
+     }
+     /* .about p{
+        float: right;
+     } */
+/* end about */
+
+
+
+
+
+
+/* footer styling */
+    footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        color:#fff;
+        background-color: black;
+        margin-top: 100px;
+        border-bottom: 1px solid #fff;
+    }
+
+footer > h2{
+    color: #fff;
+    font-family: "Booter - Zero Zero";
+    font-size: 5rem;
+    margin: 0;
 }
-.image_div >img{
-    border-radius: 50%;
+
+
+footer > ul{
+    padding: 0;
+    margin: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
 }
-.img_abt{
-    float: left;
-    height: 15rem;
-    width: 15rem;
-    border-radius: 50%;
+footer > ul > li{
+    margin-right: 20px;
 }
-.about_deco{
-    margin: 5rem 10rem ;
-    text-align: center;
-    align-items: center;
+
+footer > ul > li > a{
+    text-decoration: none;
+    color: #fff;
 }
-.float_right{
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
+
+footer > ul > li > a >.fa-brands{
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in;
 }
-/* .float_right{
-    float: right;
-} */
-/*about page end*/
+
+footer > ul > li > a >.fa-brands:hover{
+    transform: translateY(-10px);
+}
+/* footer styling */
+
+
+@media (max-width:520px){
+    header > nav > ul > li{
+        margin-right: 1rem;
+    }
+ 
+    header > nav > ul > li > a{
+        font-size: 14px;
+    }
+
+    header > h1{
+        font-size: 5rem;
+        margin-bottom: 1rem;
+    }
+    footer > h2{
+        font-size: 2rem;
+    }
+    footer > ul > li{
+        margin-right: 7px;
+    }
+    
+    footer > ul > li > a >.fa-brands{
+        font-size: 1.2rem;
+    }
+
+    /* collection */
+    .collection{
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* about */
+    .about{
+        padding: 10px;
+        width: 100%;
+     }
+     .about img{
+         margin: 15px;
+      }
+ 
+      .about p{
+         text-align: justify;
+      }
+
+}

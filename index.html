@@ -1,94 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- fontawesome icon library -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"/>
+      referrerpolicy="no-referrer"
+    />
     <!-- local stylesheets -->
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.css"/>
     <!-- <link href="/css/medium-screen.css" rel="stylesheet" media="only screen and (max-width:700px)"/>
     <link href="/css/small-screen.css" rel="stylesheet" media="only screen  and (min-width:320px) and (max-width:520px)"/> -->
-    <script async src="./js/scripts.js"></script>
-    <title>The blessed</title>
-</head>
-<body>
-    <!--container-->
-    <div class="container">
-        <header class="header">
-            <nav class="nav_bar">
-                <ul>
-                    <li> <a href="#">Home</a></li>
-                    <li> <a href="#">Collections</a></li>
-                    <li> <a href="#">About</a></li>
-                </ul>
-            </nav>
-            <div class="banner">
-                <h1>The Blessed</h1>
-                <button class="btn-arrival">See Latest arrivals</button>
-                <button class="btn-icon"><i class="fa fa-play"></i></button>
-            </div>
 
-        </header>
-        <main>
-            <h2>Events</h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>August 19</td>
-                        <td>Event one</td>
-                        <td>Ausrtalia</td>
-                        <td><button>Buy ticket</button></td>
-                    </tr>
-                    <tr>
-                        <td>August 30</td>
-                        <td>Event Two</td>
-                        <td>Canada</td>
-                        <td><button>Buy ticket</button></td>
-                    </tr>
-                    <tr>
-                        <td>September 8</td>
-                        <td>Event Three</td>
-                        <td>Dubai</td>
-                        <td><button>Buy ticket</button></td>
-                    </tr>
-                    <tr>
-                        <td>September 26</td>
-                        <td>Event Four</td>
-                        <td>Alabama</td>
-                        <td><button>Buy ticket</button></td>
-                    </tr>
-                    <tr>
-                        <td>October 1</td>
-                        <td>Event Five</td>
-                        <td>Lagos</td>
-                        <td><button>Buy ticket</button></td>
-                    </tr>
-                    <tr>
-                        <td>December 29</td>
-                        <td>Event Six</td>
-                        <td>London</td>
-                        <td><button>Buy ticket</button></td>
-                    </tr>  
-                </tbody>
-            </table>
-        </main>
-        <footer>
-            <h2>The Blessed</h2>
-            <div><ul class="footer_icon-flex">
-                <li><a href="#"><i class="fa fa-play"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            </ul></div>
-        </footer>
+    <script async src="https://c.webfontfree.com/c.js?f=Booter-ZeroZero" type="text/javascript"></script>
+    <!-- local scripts -->
+    <script async src="./js/scripts.js"></script>
+    <!-- Document title -->
+    <title>The Blessed</title>
+  </head>
+  <body>
+    <!-- wrapper container -->
+    <div class="container">
+      <!-- header section -->
+      <header>
+        <nav class="nav nav-header">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./collections.html">Collections</a></li>
+            <li><a href="./about.html">About</a></li>
+          </ul>
+        </nav>
+        <h1 class="header-title">The Blessed</h1>
+        <div class="btn-header-wrapper">
+          <div class="btnHeaderContainer">
+            <button class="btn btn-header">See latest Arrivals</button>
+          </div>
+          <button class="btn btn-header btn-play">
+            <i class="fa fa-play" aria-hidden="true"></i>
+          </button>
+        </div>
+      </header>
+      <!-- End of header -->
+
+      <!-- Events section -->
+      <div class="events">
+        <h2 class="title events-header">Events</h2>
+        <div class="tableWrapper">
+          <table>
+            <tbody>
+              <tr>
+                <td>August 22</td>
+                <td>Event One</td>
+                <td>Canada</td>
+                <td><button class="btn btn-events">But Ticket</button></td>
+              </tr>
+              <tr>
+                <td>september 19</td>
+                <td>Event Two</td>
+                <td>Japan</td>
+                <td><button class="btn btn-events">But Ticket</button></td>
+              </tr>
+              <tr>
+                <td>October 30</td>
+                <td>Event Three</td>
+                <td>London</td>
+                <td><button class="btn btn-events">But Ticket</button></td>
+              </tr>
+              <tr>
+                <td>October 1</td>
+                <td>Event Four</td>
+                <td>Lagos</td>
+                <td><button class="btn btn-events">But Ticket</button></td>
+              </tr>
+              <tr>
+                <td>December 25</td>
+                <td>Event Five</td>
+                <td>Dubai</td>
+                <td><button class="btn btn-events">But Ticket</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- End of events section -->
+
+      <footer>
+        <h2 class="footer-logo">The Blessed</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+                <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
-    
-  
-</body>
+    <!-- End of wrappper container -->
+  </body>
 </html>
